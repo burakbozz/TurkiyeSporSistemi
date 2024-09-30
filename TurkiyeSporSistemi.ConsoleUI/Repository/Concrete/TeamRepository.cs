@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using TurkiyeSporSistemi.ConsoleUI.Exceptions;
 using TurkiyeSporSistemi.ConsoleUI.Model;
 using TurkiyeSporSistemi.ConsoleUI.Repository.Abstaracts;
 
@@ -39,7 +36,7 @@ public class TeamRepository : IRepository<Team, Guid>
         if (team is null)
         {
 
-            throw new Exception($"Aradığınız Id ye göre Takım bulunamadı : {id}");
+            throw new NotFoundException($"Aradığınız Id ye göre Takım bulunamadı : {id}");
         }
         return team;
     }
@@ -52,6 +49,6 @@ public class TeamRepository : IRepository<Team, Guid>
 
         BaseRepository.Teams.Insert(index, entity);
 
-        return team;
+        return entity;
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.Net;
 
 namespace TurkiyeSporSistemi.ConsoleUI.Model.ReturnModels;
 
@@ -12,8 +9,11 @@ public class ReturnModel<T>
     public string? Message { get; set; }
     public T? Data { get; set; }
 
+    public HttpStatusCode StatusCode { get; set; }
+
     public override string ToString()
     {
-        return $"Başarılı Mı : {Success} \n Mesaj : {Message} \n Veri : {Data}";
+        return $"Başarılı Mı : {Success} \n Mesaj : {Message} \n Veri : {Data} \n Status : {StatusCode}";
+
     }
 }
