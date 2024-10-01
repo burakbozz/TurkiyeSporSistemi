@@ -1,6 +1,7 @@
 ﻿
 
 using TurkiyeSporSistemi.ConsoleUI.Model;
+using TurkiyeSporSistemi.ConsoleUI.Model.Enums;
 using TurkiyeSporSistemi.ConsoleUI.Service;
 
 
@@ -15,7 +16,8 @@ Player updated  = new Player
     Id = 2,
     Name = "Edin",
     Surname = "Dzeko",
-    Branch = "Futbol",
+    Branch = Branch.Futbol,
+    Gender = Gender.Male,
     MarketValue = 100000,
     Number = "99",
     Position = "Forvet",
@@ -27,7 +29,8 @@ Player updated2 = new Player
     Id = 2,
     Name = "",
     Surname = "Dzeko",
-    Branch = "Futbol",
+    Branch = Branch.Futbol,
+    Gender = Gender.Male,   
     MarketValue = 100000,
     Number = "99",
     Position = "Forvet",
@@ -59,3 +62,4 @@ Console.WriteLine("--------------------------------------");
 Console.WriteLine(playerService.Update(3, updated));
 
 
+Console.WriteLine(updated);

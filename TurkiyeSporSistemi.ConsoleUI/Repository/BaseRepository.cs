@@ -1,5 +1,6 @@
 ﻿
 using TurkiyeSporSistemi.ConsoleUI.Model;
+using TurkiyeSporSistemi.ConsoleUI.Model.Enums;
 
 namespace TurkiyeSporSistemi.ConsoleUI.Repository;
 
@@ -32,7 +33,8 @@ public static class BaseRepository
                 Id = 1,
                 Name="Okay",
                 Surname = "Yokuşlu",
-                Branch = "Futbol",
+                Branch = Branch.Futbol,
+                Gender = Gender.Male,
                 MarketValue = 1000000,
                 Number = "5",
                 Position = "Defansif Orta Saha",
@@ -43,7 +45,8 @@ public static class BaseRepository
                 Id= 2,
                 Name = "Atilla",
                 Surname = "Karaoğlan",
-                Branch = "Futbol",
+                Branch = Branch.Futbol,
+                Gender = Gender.Male,   
                 MarketValue = 100000,
                 Number = "99",
                 Position = "Forvet",
